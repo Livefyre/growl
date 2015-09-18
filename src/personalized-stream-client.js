@@ -71,7 +71,7 @@ define([
     PersonalizedStreamClient.prototype.onStreamData = function(rawData){
         var data = rawData.event;
         //Broadcast all new post-type data
-        if(data.published && data.verb === "create") {
+        if(data.published && data.verb === "post") {
             var msg = {
                 channel: 'personalized-stream',
                 topic: 'content',
